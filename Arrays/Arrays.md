@@ -31,11 +31,11 @@ arr.forEach(num => num * 2);
 forEach() executes the function for each element but does not return anything. It's primarily used for side effects, not for transforming data.
 
 ### 4. How do you find the largest number in an array?
-````
+
+```
 const arr = [10, 20, 5, 15];
 const max = Math.max(...arr);
 console.log(max);
-
 ```
 ⭐ Using the spread operator (...), you can pass the array elements as arguments to Math.max(), which returns the largest number, in this case, 20.
 
@@ -53,7 +53,7 @@ const arr = [1, 2, 3, 4, 5];
 arr.splice(2, 1, 99);
 console.log(arr);
 ```
-The splice() method modifies the array by removing or replacing elements. Here, it removes 1 element at index 2 (3) and inserts 99. The result is [1, 2, 99, 4, 5].
+⭐ The splice() method modifies the array by removing or replacing elements. Here, it removes 1 element at index 2 (3) and inserts 99. The result is [1, 2, 99, 4, 5].
 
 ### 7. How can you remove duplicates from an array?
 ```
@@ -64,192 +64,173 @@ console.log(unique);
 ⭐ The Set object lets you store unique values. By spreading the Set into a new array, you can remove duplicates. The result will be [1, 2, 3, 4, 5].
 
 ### 8. How do you find the sum of all elements in an array?
-````
+
+```
 const arr = [1, 2, 3, 4, 5];
 const sum = arr.reduce((acc, num) => acc + num, 0);
 console.log(sum);
 ```
 ⭐ The reduce() method reduces the array to a single value by applying a function to accumulate the result. Here, it sums all the numbers, resulting in 15.
 
-9. How do you reverse an array without using reverse()?
-javascript
-Copy code
+### 9. How do you reverse an array without using reverse()?
+```
 const arr = [1, 2, 3, 4, 5];
 const reversed = [];
 for (let i = arr.length - 1; i >= 0; i--) {
   reversed.push(arr[i]);
 }
 console.log(reversed);
-Answer:
-A for loop can be used to iterate the array from the last element to the first, manually pushing each element into a new array to reverse it. The result is [5, 4, 3, 2, 1].
+```
+⭐ A for loop can be used to iterate the array from the last element to the first, manually pushing each element into a new array to reverse it. The result is [5, 4, 3, 2, 1].
 
-10. What will be the output of this code?
-javascript
-Copy code
+### 10. What will be the output of this code?
+```
 const arr = ['a', 'b', 'c'];
 console.log(arr.indexOf('d'));
-Answer:
-The indexOf() method returns the index of the first occurrence of the element, or -1 if the element is not found. Since 'd' is not in the array, the output will be -1.
+```
+⭐ The indexOf() method returns the index of the first occurrence of the element, or -1 if the element is not found. Since 'd' is not in the array, the output will be -1.
 
-11. How do you merge two arrays?
-javascript
-Copy code
+### 11. How do you merge two arrays?
+```
 const arr1 = [1, 2];
 const arr2 = [3, 4];
 const merged = [...arr1, ...arr2];
 console.log(merged);
-Answer:
-Using the spread operator, you can merge arrays. The result is [1, 2, 3, 4].
+```
+ ⭐ Using the spread operator, you can merge arrays. The result is [1, 2, 3, 4].
 
-12. How do you find the intersection of two arrays?
-javascript
-Copy code
+### 12. How do you find the intersection of two arrays?
+```
 const arr1 = [1, 2, 3, 4];
 const arr2 = [3, 4, 5, 6];
 const intersection = arr1.filter(num => arr2.includes(num));
 console.log(intersection);
-Answer:
-Using filter() and includes(), you can find common elements between two arrays. The result is [3, 4].
+```
+⭐ Using filter() and includes(), you can find common elements between two arrays. The result is [3, 4].
 
-13. What will be the output of the following code?
-javascript
-Copy code
+### 13. What will be the output of the following code?
+```
 const arr = [1, 2, 3];
 arr.length = 0;
 console.log(arr);
-Answer:
-Setting arr.length to 0 will empty the array, so arr will become [].
+```
+⭐ Setting arr.length to 0 will empty the array, so arr will become [].
 
-14. How do you check if every element in an array passes a condition?
-javascript
-Copy code
+### 14. How do you check if every element in an array passes a condition?
+```
 const arr = [1, 2, 3, 4, 5];
 const allPositive = arr.every(num => num > 0);
 console.log(allPositive);
-Answer:
-The every() method checks if all elements pass the provided condition. Since every number in the array is greater than 0, the result will be true.
+```
+⭐ The every() method checks if all elements pass the provided condition. Since every number in the array is greater than 0, the result will be true.
 
-15. How do you fill an array with a static value?
-javascript
-Copy code
+### 15. How do you fill an array with a static value?
+```
 const arr = new Array(5).fill(0);
 console.log(arr);
-Answer:
-The fill() method fills all elements of the array with the specified value. The result will be [0, 0, 0, 0, 0].
+```
+⭐ The fill() method fills all elements of the array with the specified value. The result will be [0, 0, 0, 0, 0].
 
-16. How do you remove the last element from an array?
-javascript
-Copy code
+### 16. How do you remove the last element from an array?
+```
 const arr = [1, 2, 3, 4];
 arr.pop();
 console.log(arr);
-Answer:
-The pop() method removes the last element from the array. After the operation, arr will be [1, 2, 3].
+```
+⭐ The pop() method removes the last element from the array. After the operation, arr will be [1, 2, 3].
 
-17. What will be the output of this code?
-javascript
-Copy code
+### 17. What will be the output of this code?
+```
 const arr = [1, 2, 3];
 const result = arr.map(num => num * 2).filter(num => num > 4);
 console.log(result);
-Answer:
-This code first multiplies each element of arr by 2, resulting in [2, 4, 6]. Then, it filters out numbers less than or equal to 4, leaving [6].
+```
+⭐ This code first multiplies each element of arr by 2, resulting in [2, 4, 6]. Then, it filters out numbers less than or equal to 4, leaving [6].
 
-18. How do you find the first element that satisfies a condition in an array?
-javascript
-Copy code
+### 18. How do you find the first element that satisfies a condition in an array?
+```
 const arr = [1, 2, 3, 4, 5];
 const firstEven = arr.find(num => num % 2 === 0);
 console.log(firstEven);
-Answer:
-The find() method returns the first element that satisfies the provided condition. The first even number in the array is 2.
+```
+⭐ The find() method returns the first element that satisfies the provided condition. The first even number in the array is 2.
 
-19. What will be the output of this code?
-javascript
-Copy code
+### 19. What will be the output of this code?
+```
 const arr = [1, 2, 3];
 arr.push(4);
 console.log(arr);
-Answer:
-The push() method adds elements to the end of an array. After pushing 4, the array becomes [1, 2, 3, 4].
+```
+⭐ The push() method adds elements to the end of an array. After pushing 4, the array becomes [1, 2, 3, 4].
 
-20. How do you sort an array of numbers in ascending order?
-javascript
-Copy code
+### 20. How do you sort an array of numbers in ascending order?
+```
 const arr = [4, 2, 5, 1, 3];
 arr.sort((a, b) => a - b);
 console.log(arr);
-Answer:
-The sort() method, when provided with a comparison function (a, b) => a - b, sorts numbers in ascending order. The result is [1, 2, 3, 4, 5].
+```
+⭐ The sort() method, when provided with a comparison function (a, b) => a - b, sorts numbers in ascending order. The result is [1, 2, 3, 4, 5].
 
-21. How do you concatenate two arrays?
-javascript
-Copy code
+### 21. How do you concatenate two arrays?
+```
 const arr1 = [1, 2];
 const arr2 = [3, 4];
 const combined = arr1.concat(arr2);
 console.log(combined);
-Answer:
-The concat() method combines two or more arrays, returning a new array. The result is [1, 2, 3, 4].
+```
+⭐ The concat() method combines two or more arrays, returning a new array. The result is [1, 2, 3, 4].
 
-22. How do you find the index of an element in an array?
-javascript
-Copy code
+### 22. How do you find the index of an element in an array?
+```
 const arr = ['apple', 'banana', 'cherry'];
 console.log(arr.indexOf('banana'));
-Answer:
-The indexOf() method returns the index of the first occurrence of the specified element, in this case 1.
+```
+⭐ The indexOf() method returns the index of the first occurrence of the specified element, in this case 1.
 
-23. What will be the output of this code?
-javascript
-Copy code
+### 23. What will be the output of this code?
+```
 const arr = [1, 2, 3, 4, 5];
 const result = arr.filter(num => num > 3);
 console.log(result);
-Answer:
-The filter() method creates a new array with all elements that pass the condition. The result will be [4, 5].
+```
+⭐ The filter() method creates a new array with all elements that pass the condition. The result will be [4, 5].
 
-24. How do you find the last index of an element in an array?
-javascript
-Copy code
+### 24. How do you find the last index of an element in an array?
+```
 const arr = [1, 2, 3, 1, 2, 3];
 console.log(arr.lastIndexOf(2));
-Answer:
-The lastIndexOf() method returns the last occurrence of the element, in this case, the index is 4.
+```
+⭐ The lastIndexOf() method returns the last occurrence of the element, in this case, the index is 4.
 
-25. How do you check if an array contains a specific element?
-javascript
-Copy code
+### 25. How do you check if an array contains a specific element?
+```
 const arr = [1, 2, 3, 4, 5];
 console.log(arr.includes(3));
-Answer:
-The includes() method checks if the array contains a specific element. Since 3 is present, the result is true.
+```
+⭐ The includes() method checks if the array contains a specific element. Since 3 is present, the result is true.
 
-26. How do you get a portion of an array?
-javascript
-Copy code
+### 26. How do you get a portion of an array?
+```
 const arr = [1, 2, 3, 4, 5];
 const subArray = arr.slice(1, 3);
 console.log(subArray);
-Answer:
-The slice() method returns a shallow copy of a portion of the array from index 1 to 3 (non-inclusive). The result is [2, 3].
+```
+⭐ The slice() method returns a shallow copy of a portion of the array from index 1 to 3 (non-inclusive). The result is [2, 3].
 
-27. What will be the output of this code?
-javascript
-Copy code
+### 27. What will be the output of this code?
+```
 const arr = ['a', 'b', 'c'];
 console.log(arr.join('-'));
-Answer:
-The join() method joins the elements of the array into a string, separated by the specified delimiter. The result will be 'a-b-c'.
+```
+⭐ The join() method joins the elements of the array into a string, separated by the specified delimiter. The result will be 'a-b-c'.
 
-28. How do you convert a string to an array of characters?
-javascript
-Copy code
+### 28. How do you convert a string to an array of characters?
+```
 const str = 'hello';
 const arr = str.split('');
 console.log(arr);
-Answer:
-The split() method splits a string into an array based on the specified delimiter. Here, it splits the string into characters, resulting in ['h', 'e', 'l', 'l', 'o'].
+```
+⭐ The split() method splits a string into an array based on the specified delimiter. Here, it splits the string into characters, resulting in ['h', 'e', 'l', 'l', 'o'].
 
 ### 29. How do you create a new array by doubling the values of an existing array?
 ```
