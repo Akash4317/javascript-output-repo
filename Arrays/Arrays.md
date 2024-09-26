@@ -22,59 +22,54 @@ console.log(arr);
 ⭐ The shift() method removes the first element of the array and shifts the remaining elements left. After calling shift(), arr will be [2, 3, 4].
 
 ### 3. What is the difference between map() and forEach() in arrays?
-javascript
-Copy code
+```
 const arr = [1, 2, 3];
 arr.map(num => num * 2);
 arr.forEach(num => num * 2);
-Answer:
-
-map() creates and returns a new array with the results of calling a provided function on every element.
+```
+⭐ map() creates and returns a new array with the results of calling a provided function on every element.
 forEach() executes the function for each element but does not return anything. It's primarily used for side effects, not for transforming data.
-4. How do you find the largest number in an array?
-javascript
-Copy code
+
+### 4. How do you find the largest number in an array?
+````
 const arr = [10, 20, 5, 15];
 const max = Math.max(...arr);
 console.log(max);
-Answer:
-Using the spread operator (...), you can pass the array elements as arguments to Math.max(), which returns the largest number, in this case, 20.
 
-5. How do you flatten a multi-dimensional array?
-javascript
-Copy code
+```
+⭐ Using the spread operator (...), you can pass the array elements as arguments to Math.max(), which returns the largest number, in this case, 20.
+
+### 5. How do you flatten a multi-dimensional array?
+```
 const arr = [1, [2, [3, [4]], 5]];
 const flat = arr.flat(Infinity);
 console.log(flat);
-Answer:
-The flat() method flattens nested arrays. By passing Infinity as the argument, you can flatten an array to any depth, resulting in [1, 2, 3, 4, 5].
+```
+⭐ The flat() method flattens nested arrays. By passing Infinity as the argument, you can flatten an array to any depth, resulting in [1, 2, 3, 4, 5].
 
-6. What will be the output of the following code?
-javascript
-Copy code
+### 6. What will be the output of the following code?
+```
 const arr = [1, 2, 3, 4, 5];
 arr.splice(2, 1, 99);
 console.log(arr);
-Answer:
+```
 The splice() method modifies the array by removing or replacing elements. Here, it removes 1 element at index 2 (3) and inserts 99. The result is [1, 2, 99, 4, 5].
 
-7. How can you remove duplicates from an array?
-javascript
-Copy code
+### 7. How can you remove duplicates from an array?
+```
 const arr = [1, 2, 2, 3, 4, 4, 5];
 const unique = [...new Set(arr)];
 console.log(unique);
-Answer:
-The Set object lets you store unique values. By spreading the Set into a new array, you can remove duplicates. The result will be [1, 2, 3, 4, 5].
+```
+⭐ The Set object lets you store unique values. By spreading the Set into a new array, you can remove duplicates. The result will be [1, 2, 3, 4, 5].
 
-8. How do you find the sum of all elements in an array?
-javascript
-Copy code
+### 8. How do you find the sum of all elements in an array?
+````
 const arr = [1, 2, 3, 4, 5];
 const sum = arr.reduce((acc, num) => acc + num, 0);
 console.log(sum);
-Answer:
-The reduce() method reduces the array to a single value by applying a function to accumulate the result. Here, it sums all the numbers, resulting in 15.
+```
+⭐ The reduce() method reduces the array to a single value by applying a function to accumulate the result. Here, it sums all the numbers, resulting in 15.
 
 9. How do you reverse an array without using reverse()?
 javascript
@@ -256,21 +251,19 @@ console.log(arr);
 Answer:
 The split() method splits a string into an array based on the specified delimiter. Here, it splits the string into characters, resulting in ['h', 'e', 'l', 'l', 'o'].
 
-29. How do you create a new array by doubling the values of an existing array?
-javascript
-Copy code
+### 29. How do you create a new array by doubling the values of an existing array?
+```
 const arr = [1, 2, 3];
 const doubled = arr.map(num => num * 2);
 console.log(doubled);
-Answer:
-The map() method creates a new array by applying a function to each element of the original array. The result will be [2, 4, 6].
+```
+⭐ The map() method creates a new array by applying a function to each element of the original array. The result will be [2, 4, 6].
 
-30. How do you check if at least one element in an array satisfies a condition?
-javascript
-Copy code
+### 30. How do you check if at least one element in an array satisfies a condition?
+```
 const arr = [1, 2, 3, 4, 5];
 const hasEven = arr.some(num => num % 2 === 0);
 console.log(hasEven);
-Answer:
-The some() method checks if at least one element passes the condition. Since the array contains even numbers, the result will be true.
+```
+⭐ The some() method checks if at least one element passes the condition. Since the array contains even numbers, the result will be true.
 
